@@ -51,6 +51,8 @@ export default function RatesSection({ compact = false }) {
 
   useEffect(() => {
     load();
+    const poll = setInterval(() => load({ silent: true }), 1000); // live board, auto-refresh
+    return () => clearInterval(poll);
   }, [load]);
 
   const meta = data?.meta;
