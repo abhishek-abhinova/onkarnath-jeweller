@@ -5,6 +5,7 @@ export const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:500
 // (products, categories, rates, gallery, settings, about) we fall back to the
 // bundled demo dataset. Local dev still talks to the live API on port 5000.
 import { demoResponse } from './demo';
+import { fetchLiveRates } from './liveRates';
 
 async function handle(res) {
   if (!res.ok) {
@@ -27,8 +28,16 @@ export const apiGet = async (path) => {
     const res = await fetch(`${API_URL}${path}`, { cache: 'no-store' });
     return await handle(res);
   } catch {
-    // Backend unreachable (Vercel / static deploy, API down, CORS) → serve the
-    // bundled catalogue so the marketing site always looks complete and live.
+    // Backend unreachable (Vercel / static deploy, API down, CORS) → try live
+    // upstream rates first, then fall back to the bundled demo dataset.
+    if (typeof path === 'string' && path.startsWith('/api/rates')) {
+      try {
+        const live = await fetchLiveRates();
+        if (live?.success && Array.isArray(live.rates) && live.rates.length) return live;
+      } catch {
+        /* live upstreams unreachable → fall back to demo */
+      }
+    }
     const demo = demoResponse(path);
     if (demo) return demo;
     throw new Error('Service temporarily unavailable');
