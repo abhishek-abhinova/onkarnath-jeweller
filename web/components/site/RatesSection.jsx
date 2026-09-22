@@ -9,6 +9,7 @@ import SectionHeading from './SectionHeading';
 
 const STATUS_META = {
   live: { label: 'Live Rate', cls: 'bg-emerald-500/15 text-emerald-600 ring-emerald-500/30', dot: 'bg-emerald-500' },
+  demo: { label: 'Reference Rates', cls: 'bg-gold-500/15 text-gold-700 ring-gold-500/30', dot: 'bg-gold-500' },
   cached: { label: 'Cached Rate', cls: 'bg-amber-500/15 text-amber-700 ring-amber-500/30', dot: 'bg-amber-500' },
   fallback: { label: 'Reference Rates', cls: 'bg-amber-500/15 text-amber-700 ring-amber-500/30', dot: 'bg-amber-500' },
   unavailable: { label: 'Unavailable', cls: 'bg-rose-500/15 text-rose-600 ring-rose-500/30', dot: 'bg-rose-500' },
