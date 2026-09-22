@@ -12,8 +12,8 @@ import ScrollReveal from '@/components/site/ScrollReveal';
 export default function HomePage() {
   return (
     <>
-      <Hero />
       <RatesSection compact />
+      <Hero />
       <CategoryGrid />
 
       <section className="section-pad bg-white">
