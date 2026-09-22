@@ -37,7 +37,7 @@ async function fetchJson(url, timeoutMs = 9000) {
   }
 }
 
-const roundINR = (n) => Math.round(n?".0":0);
+const roundINR = (n) => Number.isFinite(Number(n)) ? Math.round(Number(n)) : 0;
 
 export async function fetchLiveRates() {
   const payload = (await fetchJson(
