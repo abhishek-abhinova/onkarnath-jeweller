@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Builds
+.next/
+out/
+dist/
+build/
+.expo/
+web-build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Data (local fallback database)
+backend/data/db.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Uploads (runtime user content kept out of git)
+backend/public/uploads/tmp/
+
+# Native
+mobile/android/
+mobile/ios/
+mobile/*.jks
+mobile/*.keystore
+# Scratch logs / runtime pids (never commit)
+.tmp/
+
+# Runtime scratch (log/pids from dev smoke tests)
+.tmp/

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBE9B1"/>
+      <stop offset="50%" stop-color="#E9C45F"/>
+      <stop offset="100%" stop-color="#A97A24"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(60 60)">
+    <circle r="56" fill="#5B1423"/>
+    <circle r="54" fill="none" stroke="url(#lg)" stroke-width="3"/>
+    <circle r="47" fill="none" stroke="url(#lg)" stroke-width="1" opacity="0.8"/>
+    <g fill="url(#lg)">
+      <circle cx="0" cy="-52" r="2.2"/>
+      <circle cx="0" cy="52" r="2.2"/>
+      <circle cx="-52" cy="0" r="2.2"/>
+      <circle cx="52" cy="0" r="2.2"/>
+      <circle cx="-36.7" cy="-36.7" r="2.2"/>
+      <circle cx="36.7" cy="-36.7" r="2.2"/>
+      <circle cx="-36.7" cy="36.7" r="2.2"/>
+      <circle cx="36.7" cy="36.7" r="2.2"/>
+    </g>
+    <circle r="34" fill="none" stroke="url(#lg)" stroke-width="1.4" opacity="0.7"/>
+    <circle r="29" fill="#4A0E1B"/>
+    <circle r="28" fill="none" stroke="url(#lg)" stroke-width="1" opacity="0.6"/>
+    <text x="0" y="12" text-anchor="middle" font-size="40" font-family="'Nirmala UI','Noto Sans Devanagari',serif" fill="url(#lg)">ॐ</text>
+    <g fill="url(#lg)">
+      <ellipse cx="-3" cy="-27" rx="1.6" ry="2.6"/>
+      <ellipse cx="10" cy="-24" rx="1.4" ry="2.2"/>
+      <ellipse cx="-14" cy="-23" rx="1.2" ry="2"/>
+    </g>
+  </g>
+</svg>

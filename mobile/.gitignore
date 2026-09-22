@@ -1,0 +1,12 @@
+# Expo
+.expo/
+dist/
+dist-smoke/
+node_modules/
+
+# Generated at build time (npm run seed:images)
+assets/icon.png
+assets/adaptive-icon.png
+assets/splash.png
+assets/favicon.png
+assets/art/

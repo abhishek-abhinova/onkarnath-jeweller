@@ -1,0 +1,20 @@
+{
+  "name": "onas-jewellery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ओंकार नाथ अग्रवाल सर्राफ — Jewellery website + Admin + Backend + Android app monorepo",
+  "workspaces": [
+    "backend",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c yellow,cyan \"npm run dev --workspace backend\" \"npm run dev --workspace web\"",
+    "dev:web": "npm run dev --workspace web",
+    "dev:api": "npm run dev --workspace backend",
+    "seed": "npm run seed --workspace backend",
+    "build:web": "npm run build --workspace web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

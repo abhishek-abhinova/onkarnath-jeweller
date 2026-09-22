@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#FCF7ED"/>
+      <stop offset="75%" stop-color="#F0E4CD"/>
+      <stop offset="100%" stop-color="#DFCCAB"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDEBB4"/>
+      <stop offset="45%" stop-color="#EBC55F"/>
+      <stop offset="100%" stop-color="#A5781F"/>
+    </linearGradient>
+    <linearGradient id="gold2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF3C9"/>
+      <stop offset="50%" stop-color="#D9B14A"/>
+      <stop offset="100%" stop-color="#8C651C"/>
+    </linearGradient>
+    <radialGradient id="gem" cx="40%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#F8634C"/>
+      <stop offset="100%" stop-color="#8E1D12"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <g transform="translate(400 640)">
+    <!-- necklace arc -->
+    <path d="M -240 -340 A 250 250 0 0 1 240 -340" fill="none" stroke="url(#gold)" stroke-width="14"/>
+    <path d="M -228 -330 A 240 240 0 0 1 228 -330" fill="none" stroke="#FFF3C9" stroke-width="4" opacity="0.8"/>
+    <g stroke="url(#gold)" stroke-width="8" fill="url(#gold2)">
+      <circle cx="-150" cy="-323" r="13"/>
+      <circle cx="-75" cy="-358" r="13"/>
+      <circle cx="0" cy="-370" r="13"/>
+      <circle cx="75" cy="-358" r="13"/>
+      <circle cx="150" cy="-323" r="13"/>
+    </g>
+    <!-- pendant bail -->
+    <rect x="-18" y="-350" width="36" height="30" rx="6" fill="url(#gold)"/>
+    <circle cx="0" cy="-332" r="12" fill="none" stroke="url(#gold)" stroke-width="5"/>
+    <!-- pendant -->
+    <path d="M0 -318 C -74 -318 -96 -246 -96 -200 C -96 -156 -60 -130 0 -130 C 60 -130 96 -156 96 -200 C 96 -246 74 -318 0 -318 Z" fill="url(#gold)"/>
+    <path d="M0 -306 C -58 -306 -80 -244 -80 -202 C -80 -166 -50 -144 0 -144 C 50 -144 80 -166 80 -202 C 80 -244 58 -306 0 -306 Z" fill="url(#gold2)"/>
+    <ellipse cx="0" cy="-242" rx="34" ry="44" fill="url(#gem)" stroke="url(#gold)" stroke-width="6"/>
+    <path d="M0 -344 L -34 -302 H 34 Z" fill="url(#gold)"/>
+    <circle cx="0" cy="-262" r="10" fill="#FFE9A8"/>
+    <circle cx="0" cy="-222" r="6" fill="#F3D27E"/>
+    <path d="M0 -136 L -26 -96 H 26 Z" fill="url(#gold)"/>
+    <circle cx="0" cy="-92" r="10" fill="url(#gold)"/>
+    <path d="M0 -82 L -18 -50 H 18 Z" fill="url(#gold)"/>
+    <circle cx="0" cy="-44" r="8" fill="url(#gold2)"/>
+  </g>
+</svg>

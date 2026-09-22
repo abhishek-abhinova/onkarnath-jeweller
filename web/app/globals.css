@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --maroon: #5b1423;
+  --gold: #c9942c;
+  --ivory: #fbf6ec;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ivory-100 text-charcoal-800 font-body antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #e9c45f;
+  color: #3a0a15;
+}
+
+/* thin elegant scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f4ecdb;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9942c66;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9942c;
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-14 sm:py-20;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-gold-600;
+  }
+
+  .heading-serif {
+    @apply font-display font-semibold leading-[1.12] tracking-tight text-charcoal-900;
+  }
+
+  .heading-hindi {
+    @apply font-hindi font-semibold leading-[1.22] text-charcoal-900;
+  }
+
+  .gold-text {
+    background: linear-gradient(100deg, #8c651c, #dfaf3f 45%, #a5781f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 active:scale-[0.98];
+  }
+
+  .btn-gold {
+    @apply btn bg-gradient-to-br from-gold-400 to-gold-600 text-white shadow-gold hover:from-gold-300 hover:to-gold-500 hover:shadow-[0_14px_40px_-12px_rgba(201,148,44,0.7)];
+  }
+
+  .btn-dark {
+    @apply btn bg-maroon-800 text-gold-100 hover:bg-maroon-700;
+  }
+
+  .btn-outline {
+    @apply btn border border-gold-500/60 bg-white/40 text-maroon-800 backdrop-blur hover:border-gold-500 hover:bg-gold-50;
+  }
+
+  .btn-outline-dark {
+    @apply btn border border-white/20 text-gold-100 hover:border-gold-300 hover:bg-white/5;
+  }
+
+  .card {
+    @apply rounded-2xl bg-white shadow-card ring-1 ring-charcoal-900/5;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-gold-100/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-gold-700 ring-1 ring-gold-300/60;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-charcoal-500;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-charcoal-900/10 bg-white px-4 py-2.5 text-sm text-charcoal-800 shadow-sm outline-none transition placeholder:text-charcoal-400 focus:border-gold-500 focus:ring-2 focus:ring-gold-200;
+  }
+
+  .skeleton {
+    @apply relative overflow-hidden rounded-xl bg-ivory-200/80;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0.55) 40%, rgba(255,255,255,0) 80%);
+    background-size: 400px 100%;
+    animation: shimmer 1.4s linear infinite;
+  }
+
+  .gold-ring {
+    @apply rounded-full border border-gold-300/60 bg-gradient-to-br from-gold-100 to-gold-200;
+  }
+}
+
+@layer utilities {
+  .bg-hero {
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(201, 148, 44, 0.16), transparent 55%),
+      radial-gradient(900px 500px at -10% 110%, rgba(201, 148, 44, 0.10), transparent 55%),
+      linear-gradient(160deg, #43101d 0%, #3a0a15 45%, #2a070e 100%);
+  }
+
+  .bg-marquee-gold {
+    background:
+      radial-gradient(1000px 500px at 50% -20%, rgba(201, 148, 44, 0.14), transparent 60%),
+      linear-gradient(165deg, #fbf6ec 0%, #f6eeda 55%, #f0e4cd 100%);
+  }
+
+  .dotted-line {
+    background-image: radial-gradient(circle, rgba(201, 148, 44, 0.5) 1.2px, transparent 1.3px);
+    background-size: 22px 22px;
+  }
+
+  .pattern-zari {
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(139, 101, 28, 0.10) 18px, transparent 19px),
+      radial-gradient(circle at 75% 75%, rgba(139, 101, 28, 0.10) 18px, transparent 19px);
+    background-size: 82px 82px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

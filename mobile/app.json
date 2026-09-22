@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "ओंकार नाथ अग्रवाल सर्राफ",
+    "slug": "onas-sarraf-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#4A0E1B",
+    "primaryColor": "#C9942C",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4A0E1B"
+    },
+    "android": {
+      "package": "com.onassarraf.sarraf",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#4A0E1B"
+      }
+    }
+  }
+}
